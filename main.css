@@ -1,0 +1,276 @@
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  background: var(--clr-light-grayish-cyan);
+  display: grid;
+  place-content: center;
+  font-family: 'Space Mono', monospace;
+  padding: 2rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 7rem;
+  text-transform: uppercase;
+  color: var(--clr-very-dark-cyan);
+  letter-spacing: 1rem;
+}
+
+h1 span {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: .2rem;
+  background: var(--clr-strong-cyan);
+  padding: 1.2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--clr-very-dark-cyan);
+  min-width: 100%;
+}
+
+.wrapper {
+  /* border: 1px solid; */
+  min-width: 90rem;
+  width: 100%;
+  background: var(--clr-white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.wrapper article {
+  flex: 1;
+  min-height: 100%;
+  justify-content: space-around;
+}
+
+input {
+  background: var(--clr-very-light-grayish-cyan);
+  border: none;
+  padding: .7rem;
+  border-radius: 3px;
+  color: var(--clr-very-dark-cyan);
+}
+
+label,
+.label {
+  color: var(--clr-dark-grayish-cyan);
+}
+
+.amount-article {
+  background: var(--clr-very-dark-cyan);
+  color: var(--clr-white);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.amount-article .res {
+  font-size: 4rem;
+  color: var(--clr-strong-cyan);
+}
+
+.amount-article .tip-amount,
+.amount-article .total-amaount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.amount-article .tip-amount p span,
+.amount-article .total-amaount p span {
+  color: var(--clr-grayish-cyan);
+  display: block;
+}
+
+.bill-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-article>*:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.bill-article .bill input {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.bill-article .tip-box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--clr-white);
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.bill-article .tip-box p {
+  flex: 0 0 25%;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: var(--clr-very-dark-cyan);
+  transition: all 250ms ease;
+}
+
+.bill-article .tip-box p:hover {
+  cursor: pointer;
+  background: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+
+.bill-article .tip-box input {
+  width: 25%;
+  min-height: 5rem;
+  font-size: 2rem;
+}
+
+.bill-article .number-ppl {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-article .number-ppl input {
+  margin-top: 1rem;
+  color: var(--clr-very-dark-cyan);
+  font-size: 2rem;
+}
+
+.amount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: var(--clr-very-dark-cyan);
+}
+
+@media(max-width:768px) {
+  .wrapper {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  .amount-article {
+    width: 100%;
+  }
+
+  .wrapper article {
+    min-height: auto;
+  }
+
+  .bill-article .tip-box p {
+    flex: 0 0 45%;
+  }
+
+  .bill-article .tip-box input {
+    width: 45%;
+  }
+}

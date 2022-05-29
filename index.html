@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>
+      <span>Spli</span>
+      <span>Tter</span>
+    </h1>
+    <section class="wrapper">
+      <article class="bill-article">
+        <div class="bill">
+          <label>Bill</label>
+          <input id="bill" type="number" min="0" value="0" step="0.01" />
+        </div>
+        <div class="select-tip">
+          <p class="label">Select Tip %</p>
+          <div class="tip-box">
+            <p>5%</p>
+            <p>10%</p>
+            <p>15%</p>
+            <p>25%</p>
+            <p>50%</p>
+            <input id="tip-box" type="number" min="0" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="number-ppl">
+          <label>Number of People</label>
+          <input id="number-ppl" type="number" min="1" value="1" />
+        </div>
+      </article>
+      <article class="amount-article">
+        <div class="amount">
+          <div class="tip-amount">
+            <p>Tip Amount <span>/ person</span></p>
+            <p class="res tip-res">$0</p>
+          </div>
+          <div class="total-amaount">
+            <p>Total <span>/ person</span></p>
+            <p class="res total-res">$0</p>
+          </div>
+        </div>
+        <button id="reset">Reset</button>
+      </article>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Pavle Marinkovic</a>.
+    </div>
+  </body>
+</html>
